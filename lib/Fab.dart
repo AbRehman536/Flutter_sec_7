@@ -20,9 +20,11 @@ class FABView extends StatelessWidget {
           Icon(Icons.calendar_month,color: Colors.yellow,),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         backgroundColor: Colors.blue,
-        onPressed: (){}, child: Icon(Icons.add,color: Colors.white,),),
+        icon: Icon(Icons.chat,color: Colors.white,),
+        label: Text("Chat",style: TextStyle(color: Colors.white),),
+        onPressed: (){},),
     );
   }
 }
