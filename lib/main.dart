@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sec_7/Fab.dart';
 import 'package:flutter_sec_7/app_bar_demo.dart';
+import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/row_column.dart';
 
 void main() {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: RowColumn(),
+      home: NestedRowColumn(),
     );
   }
 }
