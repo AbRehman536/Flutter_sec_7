@@ -3,6 +3,7 @@ import 'package:flutter_sec_7/Fab.dart';
 import 'package:flutter_sec_7/app_bar_demo.dart';
 import 'package:flutter_sec_7/asset_image.dart';
 import 'package:flutter_sec_7/login_screen.dart';
+import 'package:flutter_sec_7/login_screen_validation.dart';
 import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/network_image.dart';
 import 'package:flutter_sec_7/row_column.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: LoginScreenValidation(),
     );
   }
 }
