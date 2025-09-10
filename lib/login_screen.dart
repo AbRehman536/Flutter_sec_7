@@ -22,25 +22,20 @@ class LoginScreen extends StatelessWidget {
             label: Text("Email"),
             hintText: 'abdullah@gmail.com',
             prefixIcon: Icon(Icons.email),
-            suffixIcon: Icon(Icons.account_balance),
+            suffixIcon: Icon(Icons.person),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(width: 5),
             )
           ),
         ),
         SizedBox(height: 20,),
         TextField(
-         decoration: InputDecoration(
-           label: Text("Passowrd"),
-           hintText: '123456789',
-           prefix: Icon(Icons.lock),
-           suffix: Icon(Icons.visibility),
-           border: OutlineInputBorder(
-             borderRadius: BorderRadius.circular(10),
-           )
-
-         ),
+          decoration: InputDecoration(
+            label: Text("Password"),
+            hintText: '123456789',
+            prefixIcon: Icon(Icons.lock),
+            suffixIcon: Icon(Icons.visibility),
+          ),
         ),
         SizedBox(height: 20,),
         ElevatedButton(onPressed: (){}, child: Text("Login")),
