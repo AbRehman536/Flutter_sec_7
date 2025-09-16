@@ -11,11 +11,12 @@ class ListTileDemo extends StatelessWidget {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: ListView.builder(
-        itemCount: 5,
+      body:ListView.builder(
+        itemCount: 20,
         itemBuilder: (BuildContext context, int index) {
-          return Card(
+          return const Card(
             color: Colors.green,
+            elevation: 5,
             child: ListTile(
               leading: Icon(Icons.notification_add),
               title: Text("Notification"),

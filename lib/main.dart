@@ -8,6 +8,7 @@ import 'package:flutter_sec_7/login_screen_validation.dart';
 import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/network_image.dart';
 import 'package:flutter_sec_7/row_column.dart';
+import 'package:flutter_sec_7/single_selection.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ListTileDemo(),
+      home: SingleSelectionDemo(),
     );
   }
 }
