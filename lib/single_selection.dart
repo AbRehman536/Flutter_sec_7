@@ -8,32 +8,35 @@ class SingleSelectionDemo extends StatefulWidget {
 }
 
 class _SingleSelectionDemoState extends State<SingleSelectionDemo> {
-  int selectedIndex = -1;
+  int selectedIndex = -1; // -1 means nothing selected
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text("Single Selection",style: TextStyle(color: Colors.white),),
+        title: const Text("Single Selection", style: TextStyle(color: Colors.white)),
       ),
       body: ListView.builder(
         itemCount: 7,
-        itemBuilder: (BuildContext context, int index) {
-          final isSelected = selectedIndex == index;
+        itemBuilder: (context, index) {
           return ListTile(
-            onTap: (){
-              setState(() {
-                  selectedIndex = isSelected ? -1 : index;
-              });
+            selected: selectedIndex == index, // <-- built-in property
+            selectedTileColor: Colors.black,
+            selectedColor: Colors.white,
+            leading: Icon(
+              selectedIndex == index ?
+              Icons.notification_add_outlined : Icons.notification_add,
+            ),
+            title: Text("Selected Index: $selectedIndex"),
+            subtitle: Text("Index: $index"),
+            trailing: Icon(
+              selectedIndex == index ? Icons.remove : Icons.add,
+            ),
+            onTap: () {
+              setState(() => selectedIndex = index);
             },
-            tileColor: isSelected ? Colors.black : Colors.white60,
-            textColor: isSelected ? Colors.white : Colors.black,
-            iconColor: isSelected ? Colors.white : Colors.black,
-            leading: Icon(isSelected ? Icons.notification_add_outlined : Icons.notification_add),
-            title: Text("Selected Index, $selectedIndex"),
-            subtitle: Text("Index , $index"),
-            trailing: Icon(isSelected ? Icons.remove : Icons.add),
           );
         },
       ),
