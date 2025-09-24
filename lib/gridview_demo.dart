@@ -7,6 +7,7 @@ class GridViewDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.arrow_back),
         title: Text("Grid View"),
         centerTitle: true,
         backgroundColor: Colors.blue,
