@@ -12,6 +12,7 @@ import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/network_image.dart';
 import 'package:flutter_sec_7/row_column.dart';
 import 'package:flutter_sec_7/single_selection.dart';
+import 'package:flutter_sec_7/tab_bar_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BottomBarDemo(),
+      home: TabBarDemo(),
     );
   }
 }

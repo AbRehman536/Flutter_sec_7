@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sec_7/listtile.dart';
+import 'package:flutter_sec_7/login_screen.dart';
+import 'package:flutter_sec_7/multiple_selection.dart';
+import 'package:flutter_sec_7/single_selection.dart';
 
-import 'asset_image.dart';
-import 'gridview_demo.dart';
-import 'listtile.dart';
 
 class BottomBarDemo extends StatefulWidget {
   const BottomBarDemo({super.key});
@@ -12,18 +13,19 @@ class BottomBarDemo extends StatefulWidget {
 }
 
 class _BottomBarDemoState extends State<BottomBarDemo> {
-  int selectedIndex = 0;
-  List<Widget> screenList = [AssetImageDemo(), ListTileDemo(),GridViewDemo()];
+  int selectedIndex = 2;
+  List<Widget> screenList =[ListTileDemo(),SingleSelectionDemo(),MultipleSelectionDemo(),LoginScreen()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: screenList.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.blue,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.red,
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.grey,
           showUnselectedLabels: false,
+          showSelectedLabels: true,
           onTap: (i){
             setState(() {
               selectedIndex = i;
@@ -31,10 +33,12 @@ class _BottomBarDemoState extends State<BottomBarDemo> {
           },
           currentIndex: selectedIndex,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings'),
-            BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
+            BottomNavigationBarItem(icon: Icon(Icons.chat),label: 'Chats'),
+            BottomNavigationBarItem(icon: Icon(Icons.update),label: 'Updates'),
+            BottomNavigationBarItem(icon: Icon(Icons.social_distance),label: 'Community'),
+            BottomNavigationBarItem(icon: Icon(Icons.call),label: 'Calls'),
           ]),
+
     );
   }
 }
