@@ -10,26 +10,33 @@ class TabBarDemo extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Tab Bar"),
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.red,
+          foregroundColor: Colors.white,
+          centerTitle: true,
           bottom: TabBar(
-            isScrollable: true,
-            indicatorColor: Colors.red,
-            unselectedLabelColor: Colors.grey,
-            labelColor: Colors.green,
-            tabs: [
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.black,
+              tabs: [
             Tab(text: 'Home',icon: Icon(Icons.home),),
             Tab(text: 'Settings',icon: Icon(Icons.settings),),
             Tab(text: 'Profile',icon: Icon(Icons.person),),
-          ],),
+          ]),
         ),
         body: TabBarView(children: [
           Center(child: Column(children: [
             Icon(Icons.home),
-            Text("Home"),
-          ],)),
-          Center(child: Text("Settings"),),
-          Center(child: Text("Profile"),),
-        ])
+            Text("Home")
+          ],),),
+          Center(child: Column(children: [
+            Icon(Icons.settings),
+            Text("Settings")
+          ],),),
+          Center(child:Column(children: [
+            Icon(Icons.person),
+            Text("Profile")
+          ],) ,),
+        ]),
       ),
     );
   }

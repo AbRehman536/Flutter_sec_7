@@ -3,6 +3,7 @@ import 'package:flutter_sec_7/Fab.dart';
 import 'package:flutter_sec_7/app_bar_demo.dart';
 import 'package:flutter_sec_7/asset_image.dart';
 import 'package:flutter_sec_7/bottombar_demo.dart';
+import 'package:flutter_sec_7/drawer_menu.dart';
 import 'package:flutter_sec_7/gridview_demo.dart';
 import 'package:flutter_sec_7/listtile.dart';
 import 'package:flutter_sec_7/login_screen.dart';
@@ -10,6 +11,7 @@ import 'package:flutter_sec_7/login_screen_validation.dart';
 import 'package:flutter_sec_7/multiple_selection.dart';
 import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/network_image.dart';
+import 'package:flutter_sec_7/popup_menu.dart';
 import 'package:flutter_sec_7/row_column.dart';
 import 'package:flutter_sec_7/single_selection.dart';
 import 'package:flutter_sec_7/tab_bar_demo.dart';
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -45,7 +48,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: TabBarDemo(),
+      home: DrawerMenuDemo(),
     );
   }
 }
