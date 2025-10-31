@@ -11,10 +11,10 @@ class PageViewScreen extends StatefulWidget {
 
 class _PageViewScreenState extends State<PageViewScreen> {
   PageController pageController = PageController();
-  List<OnBoardingModel> onBoardingList = [
-    OnBoardingModel(image: "assets/images/first.png", title: "First Page"),
-    OnBoardingModel(image: "assets/images/second.png", title: "Second Page"),
-    OnBoardingModel(image: "assets/images/third.png", title: "Third Page"),
+  List<OnBoardingModel> onBoardingList= [
+    OnBoardingModel(title: "First Page", image: "assets/images/first.png"),
+    OnBoardingModel(title: "Second Page", image: "assets/images/second.png"),
+    OnBoardingModel(title: "Third Page", image: "assets/images/third.png"),
   ];
   @override
   Widget build(BuildContext context) {
@@ -22,27 +22,20 @@ class _PageViewScreenState extends State<PageViewScreen> {
       body: PageView.builder(
         controller: pageController,
         itemCount: onBoardingList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Column(
-            children: [
-              Expanded(
-                child: Column(children: [
-                  Image.asset(onBoardingList[index].image.toString(),height: 300,),
-                  Text(onBoardingList[index].title.toString(),style: TextStyle(fontSize: 30),),
-                  ElevatedButton(onPressed: (){}, child: Text("Next"))
-                ],),
-              ),
-              SmoothPageIndicator(
-                  controller: pageController,  // PageController
-                  count:  onBoardingList.length,
-                  effect:  ExpandingDotsEffect(),  // your preferred effect
-                  onDotClicked: (index){
-                  }
-              )
-            ],
-          );
-
-        },)
+        itemBuilder: (BuildContext context, int index) { 
+          return Column(children: [
+            Image.asset(onBoardingList[index].image.toString(),height: 300,),
+            Text(onBoardingList[index].title.toString()),
+            ElevatedButton(onPressed: (){}, child: Text("Skip")),
+            SmoothPageIndicator(
+                controller: pageController,  // PageController
+                count:  onBoardingList.length,
+                effect:  ExpandingDotsEffect(),  // your preferred effect
+                onDotClicked: (index){
+                }
+            )
+          ],);
+        },),
     );
   }
 }
