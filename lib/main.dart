@@ -3,6 +3,7 @@ import 'package:flutter_sec_7/Fab.dart';
 import 'package:flutter_sec_7/app_bar_demo.dart';
 import 'package:flutter_sec_7/asset_image.dart';
 import 'package:flutter_sec_7/bottombar_demo.dart';
+import 'package:flutter_sec_7/date_time_picker.dart';
 import 'package:flutter_sec_7/dialog_box.dart';
 import 'package:flutter_sec_7/drawer_menu.dart';
 import 'package:flutter_sec_7/gridview_demo.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DialogBoxDemo(),
+      home: DateTimePicker(),
     );
   }
 }

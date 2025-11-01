@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sec_7/login_screen.dart';
 
 class DialogBoxDemo extends StatelessWidget {
   const DialogBoxDemo({super.key});
@@ -46,7 +47,7 @@ class DialogBoxDemo extends StatelessWidget {
                   content: Text("Do you want to Comment on this Post ?"),
                   actions: [
                     TextButton(onPressed: (){
-                      Navigator.pop(context);
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
                     }, child: Text("OKAY"))
                   ],
                 );
