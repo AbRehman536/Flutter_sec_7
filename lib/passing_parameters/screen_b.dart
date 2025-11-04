@@ -10,7 +10,7 @@ class ScreenB extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Screen B"),
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.blue,
         foregroundColor: Colors.black,
       ),
       body: Center(child: Column(children: [
