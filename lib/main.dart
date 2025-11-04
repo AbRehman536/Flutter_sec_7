@@ -14,6 +14,7 @@ import 'package:flutter_sec_7/multiple_selection.dart';
 import 'package:flutter_sec_7/nested_row_column.dart';
 import 'package:flutter_sec_7/network_image.dart';
 import 'package:flutter_sec_7/page_view_screen.dart';
+import 'package:flutter_sec_7/passing_parameters/screen_a.dart';
 import 'package:flutter_sec_7/popup_menu.dart';
 import 'package:flutter_sec_7/row_column.dart';
 import 'package:flutter_sec_7/single_selection.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DateTimePicker(),
+      home: ScreenA(),
     );
   }
 }
