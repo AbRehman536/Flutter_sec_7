@@ -13,13 +13,14 @@ class Screen2 extends StatelessWidget {
         title: Text("Screen 2"),
         backgroundColor: Colors.yellow,
       ),
-      body: Column(
-        children: [
+      body:
+        Column(children: [
           Text(userProvider.getName().toString()),
           Text(userProvider.getEmail().toString()),
-          ElevatedButton(onPressed: (){}, child: Text("Back"))
-        ],
-      ),
+          ElevatedButton(onPressed: (){
+            Navigator.pop(context);
+          }, child: Text("Back"))
+        ],)
     );
   }
 }

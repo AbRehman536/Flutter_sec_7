@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
 class UserProvider extends ChangeNotifier{
-  String _name = "";
-  String _email = "";
+  String _name = " ";
+  String _email = " ";
 
   void setName(String value){
     _name = value;

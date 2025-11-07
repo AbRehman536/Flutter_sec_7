@@ -15,11 +15,11 @@ class Screen1 extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Center(child: 
-        ElevatedButton(onPressed: (){
-          userProvider.setName("Abdullah");
-          userProvider.setEmail("abdullah@gmail.com");
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>Screen2()));
-        }, child: Text("Show Screen 2")),),
+      ElevatedButton(onPressed: (){
+        userProvider.setName("Abdullah");
+        userProvider.setEmail("abdullah@gmail.com");
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Screen2()));
+      }, child: Text("Show Screen 2")),)
     );
   }
 }
